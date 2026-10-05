@@ -36,6 +36,18 @@
         </BR>
         The basket object should contain an integer quantity for each product in the basket, while the prices object should contain a number representing the price of each product in the shop.
 
-
+        <BR></BR>
+        Example Exchange Rate
+    <script>
+    let euro=()=>{
+    fetch("https://open.er-api.com/v6/latest/USD")
+    .then(resp=>resp.json())
+    .then(data=>data["rates"]["EUR"])
+    .then(rate=>alert(rate));
+  
+  }
+  </script>
+<button onclick="euro()">Euro</button>
+</body>
     </body>
 </html>
